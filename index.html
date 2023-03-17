@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Basic NOTES web app</title>
+
+        <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="name">Web Note</div>
+            <div id="menubutton"><a id="menulink" href="#">&#9776</a></div>
+            <div id="menu" class="hiddenmenu">
+                <div class="menuitem"><a id="home" href="#">Note +</a></div>
+                <div class="menuitem"><a id="notes" href="#">All Notes</a></div>
+                <div class="menuitem"><a id="about" href="#">About us</a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="container">
+            <input type="hidden" id="noteId" />
+            <input type="text" id="noteTitle" title="Title of the note" placeholder="Title">
+            <textarea id="area" rows="10" cols="50" title="Enter your note" placeholder="No note added"></textarea>
+        </div>
+
+        <div id="controls">
+            <p>
+                <a href="javascript:save();" class="button">Save</a>
+                <a href="javascript:clear();" class="button">Clear</a>
+                <a href="javascript:remove();" class="button">Remove</a></p>
+        </div>
+
+        <footer class="footer">
+            <p>Copyright (c) <span id="year"></span></p>
+        </footer>
+
+        <!-- Load the scripts -->
+        <script src="index.js"></script>
+    </body>
+</html>
